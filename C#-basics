@@ -1,0 +1,193 @@
+Here are **C# basic practice examples** with explanations to help you understand how the language works. These cover fundamental topics and provide both code and a breakdown of what’s happening.
+
+---
+
+## 🧮 1. **Print Even or Odd**
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int number = 7;
+
+        if (number % 2 == 0)
+        {
+            Console.WriteLine("Even");
+        }
+        else
+        {
+            Console.WriteLine("Odd");
+        }
+    }
+}
+```
+
+**Explanation:**
+
+* `%` is the modulus operator; it gives the remainder.
+* If a number is divisible by 2 (`number % 2 == 0`), it's even.
+
+---
+
+## 🔁 2. **Print Numbers from 1 to 10 Using a Loop**
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+```
+
+**Explanation:**
+
+* A `for` loop initializes `i`, checks the condition `i <= 10`, and increments `i` by 1 in each iteration.
+* It prints values from 1 to 10.
+
+---
+
+## ➕ 3. **Method to Add Two Numbers**
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int sum = Add(5, 3);
+        Console.WriteLine("Sum is " + sum);
+    }
+
+    static int Add(int a, int b)
+    {
+        return a + b;
+    }
+}
+```
+
+**Explanation:**
+
+* `Add` is a method that takes two integers and returns their sum.
+* The `Main` method calls `Add` and prints the result.
+
+---
+
+## 📐 4. **Check if a Number is Prime**
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int num = 7;
+        bool isPrime = true;
+
+        if (num <= 1)
+            isPrime = false;
+        else
+        {
+            for (int i = 2; i <= Math.Sqrt(num); i++)
+            {
+                if (num % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        Console.WriteLine(isPrime ? "Prime" : "Not Prime");
+    }
+}
+```
+
+**Explanation:**
+
+* A number is **prime** if it's greater than 1 and has no divisors other than 1 and itself.
+* We check divisibility up to the square root of the number for efficiency.
+
+---
+
+## 📋 5. **Using a Switch Statement**
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int day = 3;
+
+        switch (day)
+        {
+            case 1:
+                Console.WriteLine("Monday");
+                break;
+            case 2:
+                Console.WriteLine("Tuesday");
+                break;
+            case 3:
+                Console.WriteLine("Wednesday");
+                break;
+            default:
+                Console.WriteLine("Other day");
+                break;
+        }
+    }
+}
+```
+
+**Explanation:**
+
+* `switch` is used when you have multiple conditions based on the value of a variable.
+* `break` exits the switch after a match is found.
+
+---
+
+## 👥 6. **Simple Class and Object**
+
+```csharp
+using System;
+
+class Person
+{
+    public string Name;
+    public int Age;
+
+    public void SayHello()
+    {
+        Console.WriteLine($"Hi, I’m {Name} and I’m {Age} years old.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Person p = new Person();
+        p.Name = "Alice";
+        p.Age = 30;
+        p.SayHello();
+    }
+}
+```
+
+**Explanation:**
+
+* `Person` is a class with fields and a method.
+* An object `p` is created and its fields are set, then a method is called on it.
+
