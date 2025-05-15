@@ -1,0 +1,172 @@
+## 📊 6. **Sum and Average of an Array**
+```csharp
+using System;
+class Program
+{
+    static void Main()
+    {
+        int[] numbers = { 10, 20, 30, 40, 50 };
+        int sum = 0;
+        foreach (int num in numbers)
+        {
+            sum += num;
+        }
+        double average = (double)sum / numbers.Length;
+        Console.WriteLine($"Sum: {sum}, Average: {average}");
+    }
+}
+**Explanation:**
+* Loops through the array, adds each value to `sum`.
+* Divides by the length to get the average.
+* Casts to `double` for decimal precision.
+---
+## 📆 7. **Get Current Date and Time**
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        DateTime now = DateTime.Now;
+        Console.WriteLine("Current date and time: " + now);
+        Console.WriteLine("Just the date: " + now.ToShortDateString());
+        Console.WriteLine("Just the time: " + now.ToShortTimeString());
+    }
+}
+**Explanation:**
+* `DateTime.Now` gets the system's current date and time.
+* You can format it in multiple ways.
+---
+## 🔁 8. **Reverse a String**
+```csharp
+using System;
+class Program
+{
+    static void Main()
+    {
+        string input = "hello";
+        char[] chars = input.ToCharArray();
+        Array.Reverse(chars);
+        string reversed = new string(chars);
+
+        Console.WriteLine("Reversed string: " + reversed);
+    }
+}
+```
+
+**Explanation:**
+
+* Converts the string to a character array, reverses it, then re-creates a string from it.
+
+---
+
+## 📦 9. **Simple Calculator Using Switch**
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double a = 10, b = 5;
+        char op = '+';
+        double result;
+
+        switch (op)
+        {
+            case '+': result = a + b; break;
+            case '-': result = a - b; break;
+            case '*': result = a * b; break;
+            case '/': result = b != 0 ? a / b : throw new DivideByZeroException(); break;
+            default: throw new InvalidOperationException("Invalid operator");
+        }
+
+        Console.WriteLine($"Result: {result}");
+    }
+}
+```
+
+**Explanation:**
+
+* Basic arithmetic with exception handling for divide-by-zero.
+
+---
+
+## 👨‍👩‍👧 10. **Constructor in a Class**
+
+```csharp
+using System;
+
+class Person
+{
+    public string Name;
+    public int Age;
+
+    // Constructor
+    public Person(string name, int age)
+    {
+        Name = name;
+        Age = age;
+    }
+
+    public void Introduce()
+    {
+        Console.WriteLine($"Hi, I'm {Name}, {Age} years old.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Person person = new Person("Jane", 28);
+        person.Introduce();
+    }
+}
+```
+
+**Explanation:**
+
+* `Person` has a constructor to initialize its fields at the time of object creation.
+
+---
+
+## 🧪 11. **Palindrome Checker**
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string input = "madam";
+        string reversed = new string(input.ToCharArray().Reverse().ToArray());
+
+        if (input == reversed)
+            Console.WriteLine("Palindrome");
+        else
+            Console.WriteLine("Not a Palindrome");
+    }
+}
+```
+
+**Explanation:**
+
+* Reverses the string and compares it with the original.
+
+---
+
+## 🧠 Want a Practice Set?
+
+I can give you a **mini challenge set** with tasks like:
+
+1. Create a class for a `Book` with properties and a method to display info.
+2. Build a mini contact manager using a list of objects.
+3. Create a function that returns the factorial of a number.
+4. Find duplicates in an array.
+5. Create a program to count the frequency of characters in a string.
+============================= End =====================================
